@@ -66,6 +66,7 @@
     <Compile Include="Chapter1\Problem1_2UnitTests.cs" />
     <Compile Include="Chapter1\Problem1_3UnitTests.cs" />
     <Compile Include="Personal\PersonalProblem1_UnitTests.cs" />
+    <Compile Include="Personal\PersonalProblem2_UnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
