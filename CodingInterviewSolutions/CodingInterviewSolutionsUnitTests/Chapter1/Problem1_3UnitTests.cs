@@ -8,7 +8,7 @@ namespace CodingInterviewSolutionsUnitTests.Chapter1
 	public class Problem1_3UnitTests
 	{
 		[TestMethod]
-		public void Test1()
+		public void Problem1Tests()
 		{
 			Problem1_3.RemoveDuplicateCharacters("doggie")
 				.Should().Be("dogie");

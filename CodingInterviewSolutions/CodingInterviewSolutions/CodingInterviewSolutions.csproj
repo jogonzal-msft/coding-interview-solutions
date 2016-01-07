@@ -46,6 +46,7 @@
     <Compile Include="Personal\PersonalProblem1.cs" />
     <Compile Include="Personal\PersonalProblem2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Small\SmallProblem1.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
