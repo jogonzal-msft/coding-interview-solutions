@@ -46,6 +46,7 @@
     <Compile Include="Personal\PersonalProblem1.cs" />
     <Compile Include="Personal\PersonalProblem2.cs" />
     <Compile Include="Personal\PersonalProblem3.cs" />
+    <Compile Include="Personal\PersonalProblem4.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Small\SmallProblem1.cs" />
     <Compile Include="Small\SmallProblem2.cs" />
