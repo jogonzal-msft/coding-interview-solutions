@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodingInterviewSolutions.Named
 {
@@ -38,7 +36,19 @@ namespace CodingInterviewSolutions.Named
 				"brown",
 				"white",
 				"black",
-				"gray"
+				"gray",
+				"special",
+				"notspecial",
+				"paris",
+				"monterrey",
+				"yes",
+				"no",
+				"small",
+				"big",
+				"huge",
+				"donald",
+				"mexico",
+				"paper"
 			};
 
 			private char[] _word;
