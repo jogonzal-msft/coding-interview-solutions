@@ -55,13 +55,13 @@ namespace CodingInterviewSolutionsUnitTests.Personal
 			{
 				new PersonalProblem4.CondensedContact()
 				{
-					Names = new List<string>()
+					Names = new HashSet<string>()
 					{
 						"Jorge",
 						"Jorge2",
 						"George",
 					},
-					Emails = new List<string>()
+					Emails = new HashSet<string>()
 					{
 						"jorge@msft.com",
 						"jo@msft.com",
@@ -71,11 +71,11 @@ namespace CodingInterviewSolutionsUnitTests.Personal
 				},
 				new PersonalProblem4.CondensedContact()
 				{
-					Names = new List<string>()
+					Names = new HashSet<string>()
 					{
 						"Bob",
 					},
-					Emails = new List<string>()
+					Emails = new HashSet<string>()
 					{
 						"bob@msft.com",
 						"bob2@msft.com",
@@ -85,7 +85,7 @@ namespace CodingInterviewSolutionsUnitTests.Personal
 
 			List<PersonalProblem4.CondensedContact> result = PersonalProblem4.Solve(contacts);
 
-			result.Should().BeEquivalentTo(expected);
+			result.ShouldBeEquivalentTo(expected);
 		}
 	}
 }
