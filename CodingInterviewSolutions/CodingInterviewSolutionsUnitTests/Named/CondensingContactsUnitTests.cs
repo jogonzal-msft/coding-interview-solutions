@@ -1,19 +1,19 @@
 ﻿using System.Collections.Generic;
-using CodingInterviewSolutions.Personal;
+using CodingInterviewSolutions.Named;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CodingInterviewSolutionsUnitTests.Personal
+namespace CodingInterviewSolutionsUnitTests.Named
 {
 	[TestClass]
-	public class PersonalProblem4_UnitTests
+	public class CondensingContactsUnitTests
 	{
 		[TestMethod]
 		public void MultipleLists_OneList()
 		{
-			var contacts = new List<PersonalProblem4.Contact>()
+			var contacts = new List<CondensingContacts.Contact>()
 			{
-				new PersonalProblem4.Contact()
+				new CondensingContacts.Contact()
 				{
 					Name = "Jorge",
 					Emails = new List<string>()
@@ -22,7 +22,7 @@ namespace CodingInterviewSolutionsUnitTests.Personal
 						"jo@msft.com",
 					}
 				},
-				new PersonalProblem4.Contact()
+				new CondensingContacts.Contact()
 				{
 					Name = "George",
 					Emails = new List<string>()
@@ -31,7 +31,7 @@ namespace CodingInterviewSolutionsUnitTests.Personal
 						"jorgeaguirre@msft.com",
 					}
 				},
-				new PersonalProblem4.Contact()
+				new CondensingContacts.Contact()
 				{
 					Name = "Bob",
 					Emails = new List<string>()
@@ -40,7 +40,7 @@ namespace CodingInterviewSolutionsUnitTests.Personal
 						"bob2@msft.com",
 					}
 				},
-				new PersonalProblem4.Contact()
+				new CondensingContacts.Contact()
 				{
 					Name = "Jorge2",
 					Emails = new List<string>()
@@ -51,9 +51,9 @@ namespace CodingInterviewSolutionsUnitTests.Personal
 				},
 			};
 
-			var expected = new List<PersonalProblem4.CondensedContact>()
+			var expected = new List<CondensingContacts.CondensedContact>()
 			{
-				new PersonalProblem4.CondensedContact()
+				new CondensingContacts.CondensedContact()
 				{
 					Names = new HashSet<string>()
 					{
@@ -69,7 +69,7 @@ namespace CodingInterviewSolutionsUnitTests.Personal
 						"jorgeaguirre@msft.com",
 					}
 				},
-				new PersonalProblem4.CondensedContact()
+				new CondensingContacts.CondensedContact()
 				{
 					Names = new HashSet<string>()
 					{
@@ -83,7 +83,7 @@ namespace CodingInterviewSolutionsUnitTests.Personal
 				},
 			};
 
-			List<PersonalProblem4.CondensedContact> result = PersonalProblem4.Solve(contacts);
+			List<CondensingContacts.CondensedContact> result = CondensingContacts.Solve(contacts);
 
 			result.ShouldBeEquivalentTo(expected);
 		}

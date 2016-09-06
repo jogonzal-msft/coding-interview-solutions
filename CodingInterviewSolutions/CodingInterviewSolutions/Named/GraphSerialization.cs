@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace CodingInterviewSolutions.Personal
+namespace CodingInterviewSolutions.Named
 {
-	public class Node
-	{
-		public Dictionary<string, string> Properties { get; set; }
-		public List<Node> Connections { get; set; }
-	}
-
 	/// <summary>
 	/// This problem consists on serializing and deserializing a graph object given below
 	/// </summary>
-	public static class PersonalProblem3
+	public static class GraphSerialization
 	{
+		public class Node
+		{
+			public Dictionary<string, string> Properties { get; set; }
+			public List<Node> Connections { get; set; }
+		}
+
 		/// <summary>
 		/// There are a couple things we need to watch out for here:
 		/// 1. We'll generate a new node for serialization - we'll add to that node only if the node was

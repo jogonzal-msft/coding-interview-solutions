@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CodingInterviewSolutions.Personal
+namespace CodingInterviewSolutions.Named
 {
 	/// <summary>
 	/// Find the lowest common ancestor in a binary tree
 	/// </summary>
-	public static class PersonalProblem2
+	public static class TreeLowestCommonAncestor
 	{
 		/// <summary>
 		/// Binary tree implementation

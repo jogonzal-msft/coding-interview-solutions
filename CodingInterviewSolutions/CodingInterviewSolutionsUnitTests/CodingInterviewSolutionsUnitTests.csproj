@@ -66,9 +66,9 @@
     <Compile Include="Chapter1\Problem1_2UnitTests.cs" />
     <Compile Include="Chapter1\Problem1_3UnitTests.cs" />
     <Compile Include="Named\I18NUnitTests.cs" />
-    <Compile Include="Personal\PersonalProblem1_UnitTests.cs" />
-    <Compile Include="Personal\PersonalProblem2_UnitTests.cs" />
-    <Compile Include="Personal\PersonalProblem4_UnitTests.cs" />
+    <Compile Include="Named\CountRegionsInBoolArrayUnitTests.cs" />
+    <Compile Include="Named\TreeLowestCommonAncestorUnitTests.cs" />
+    <Compile Include="Named\CondensingContactsUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Small\SmallProblem1UnitTests.cs" />
     <Compile Include="Small\SmallProblem2UnitTests.cs" />
@@ -82,6 +82,7 @@
       <Name>CodingInterviewSolutions</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

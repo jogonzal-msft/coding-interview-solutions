@@ -1,12 +1,12 @@
 ﻿using System;
-using CodingInterviewSolutions.Personal;
+using CodingInterviewSolutions.Named;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CodingInterviewSolutionsUnitTests.Personal
+namespace CodingInterviewSolutionsUnitTests.Named
 {
 	[TestClass]
-	public class PersonalProblem1_UnitTests
+	public class CountRegionsInBoolArrayUnitTests
 	{
 		[TestMethod]
 		public void MatrixWithNoRegions()
@@ -18,7 +18,7 @@ namespace CodingInterviewSolutionsUnitTests.Personal
 				{false, false, false}
 			};
 
-			PersonalProblem1.FindCountRegionsWithTrue(matrix)
+			CountRegionsInBoolArray.FindCountRegionsWithTrue(matrix)
 				.Should().Be(0);
 		}
 
@@ -32,7 +32,7 @@ namespace CodingInterviewSolutionsUnitTests.Personal
 				{false, false, false}
 			};
 
-			PersonalProblem1.FindCountRegionsWithTrue(matrix)
+			CountRegionsInBoolArray.FindCountRegionsWithTrue(matrix)
 				.Should().Be(1);
 		}
 
@@ -46,7 +46,7 @@ namespace CodingInterviewSolutionsUnitTests.Personal
 				{false, false, true}
 			};
 
-			PersonalProblem1.FindCountRegionsWithTrue(matrix)
+			CountRegionsInBoolArray.FindCountRegionsWithTrue(matrix)
 				.Should().Be(2);
 		}
 
@@ -60,7 +60,7 @@ namespace CodingInterviewSolutionsUnitTests.Personal
 				{false, false, true}
 			};
 
-			PersonalProblem1.FindCountRegionsWithTrue(matrix)
+			CountRegionsInBoolArray.FindCountRegionsWithTrue(matrix)
 				.Should().Be(3);
 		}
 
@@ -74,7 +74,7 @@ namespace CodingInterviewSolutionsUnitTests.Personal
 				{false, false, false, true, true}
 			};
 
-			PersonalProblem1.FindCountRegionsWithTrue(matrix)
+			CountRegionsInBoolArray.FindCountRegionsWithTrue(matrix)
 				.Should().Be(1);
 		}
 
@@ -88,7 +88,7 @@ namespace CodingInterviewSolutionsUnitTests.Personal
 				{false, false, false, true, true}
 			};
 
-			PersonalProblem1.FindCountRegionsWithTrue(matrix)
+			CountRegionsInBoolArray.FindCountRegionsWithTrue(matrix)
 				.Should().Be(2);
 		}
 
@@ -102,7 +102,7 @@ namespace CodingInterviewSolutionsUnitTests.Personal
 				{true, true, true, true, true}
 			};
 
-			PersonalProblem1.FindCountRegionsWithTrue(matrix)
+			CountRegionsInBoolArray.FindCountRegionsWithTrue(matrix)
 				.Should().Be(1);
 		}
 
@@ -113,7 +113,7 @@ namespace CodingInterviewSolutionsUnitTests.Personal
 
 			Action action = () =>
 			{
-				int someInt = PersonalProblem1.FindCountRegionsWithTrue(matrix);
+				int someInt = CountRegionsInBoolArray.FindCountRegionsWithTrue(matrix);
 			};
 
 			action.ShouldThrow<ArgumentNullException>();

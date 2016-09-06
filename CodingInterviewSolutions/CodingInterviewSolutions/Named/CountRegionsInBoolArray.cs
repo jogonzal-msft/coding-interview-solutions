@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CodingInterviewSolutions.Personal
+namespace CodingInterviewSolutions.Named
 {
-	public static class PersonalProblem1
+	public static class CountRegionsInBoolArray
 	{
 		/// <summary>
 		/// Given a bidimensional array of booleans, find the number of regions that are contained in that array

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CodingInterviewSolutions.Personal
+namespace CodingInterviewSolutions.Named
 {
-	public class PersonalProblem4
+	public class CondensingContacts
 	{
 		public class Contact
 		{
