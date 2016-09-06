@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace CodingInterviewSolutions.Personal
 {
@@ -30,7 +31,7 @@ namespace CodingInterviewSolutions.Personal
 
 			SerializableNode serializableRootNode = GetSerializableNode(rootNode, visitedNodes);
 
-			return JsonConvert.Serialize(serializableRootNode);
+			return JsonConvert.SerializeObject(serializableRootNode);
 		}
 
 		private static SerializableNode GetSerializableNode(Node node, Dictionary<Node, Guid> visitedNodes)
