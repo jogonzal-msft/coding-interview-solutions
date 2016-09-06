@@ -65,6 +65,7 @@
     <Compile Include="Chapter1\Problem1_1UnitTests.cs" />
     <Compile Include="Chapter1\Problem1_2UnitTests.cs" />
     <Compile Include="Chapter1\Problem1_3UnitTests.cs" />
+    <Compile Include="Named\I18NUnitTests.cs" />
     <Compile Include="Personal\PersonalProblem1_UnitTests.cs" />
     <Compile Include="Personal\PersonalProblem2_UnitTests.cs" />
     <Compile Include="Personal\PersonalProblem4_UnitTests.cs" />
