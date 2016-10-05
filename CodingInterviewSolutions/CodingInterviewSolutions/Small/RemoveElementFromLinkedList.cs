@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CodingInterviewSolutions.Small
+﻿namespace CodingInterviewSolutions.Small
 {
 	/// <summary>
 	/// Given a reference to an item in a linked list, remove it
 	/// </summary>
-	public class SmallProblem1
+	public class RemoveElementFromLinkedList
 	{
 		/// <summary>
 		/// A linked list
@@ -21,7 +15,7 @@ namespace CodingInterviewSolutions.Small
 			public int Value { get; set; }
 		}
 
-		public static void RemoveElementFromLinkedList(ref ListElement elementToRemove)
+		public static void Run(ref ListElement elementToRemove)
 		{
 			// The classical way of approaching this problem is to simply disconnect the previous node from this element
 			// The problem here is that this MIGHT be the first element, or the last

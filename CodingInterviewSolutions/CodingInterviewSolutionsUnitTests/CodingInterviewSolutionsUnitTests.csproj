@@ -71,8 +71,8 @@
     <Compile Include="Named\TreeLowestCommonAncestorUnitTests.cs" />
     <Compile Include="Named\CondensingContactsUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Small\SmallProblem1UnitTests.cs" />
-    <Compile Include="Small\SmallProblem2UnitTests.cs" />
+    <Compile Include="Small\RemoveElementFromLinkedListUnitTests.cs" />
+    <Compile Include="Small\UrlEncodeSpacesUnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

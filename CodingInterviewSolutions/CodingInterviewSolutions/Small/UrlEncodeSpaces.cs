@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CodingInterviewSolutions.Small
+﻿namespace CodingInterviewSolutions.Small
 {
 	/// <summary>
 	/// Given a string (as an array of characters) replace all spaces with "%20"
 	/// </summary>
-	public static class SmallProblem2
+	public static class UrlEncodeSpaces
 	{
 		public static char[] EncodeSpaces(char[] input)
 		{

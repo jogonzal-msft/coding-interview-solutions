@@ -4,16 +4,10 @@ using FluentAssertions;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace CodingInterviewSolutionsUnitTests.Small
 {
 	[TestClass]
-	public class SmallProblem2UnitTests
+	public class UrlEncodeSpacesUnitTests
 	{
 		[TestMethod]
 		public void SmallProblem2Tests()
@@ -38,7 +32,7 @@ namespace CodingInterviewSolutionsUnitTests.Small
 
 		private static void TestSmallProblem2(char[] input, char[] expectedOutput)
 		{
-			char[] output = SmallProblem2.EncodeSpaces(input);
+			char[] output = UrlEncodeSpaces.EncodeSpaces(input);
 			output.Should().BeEquivalentTo(expectedOutput);
 		}
 	}
