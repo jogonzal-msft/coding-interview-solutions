@@ -70,6 +70,7 @@
     <Compile Include="Named\CountRegionsInBoolArrayUnitTests.cs" />
     <Compile Include="Named\TreeLowestCommonAncestorUnitTests.cs" />
     <Compile Include="Named\CondensingContactsUnitTests.cs" />
+    <Compile Include="Named\DeepestPathInBinaryTreeUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Small\RemoveElementFromLinkedListUnitTests.cs" />
     <Compile Include="Small\UrlEncodeSpacesUnitTests.cs" />
