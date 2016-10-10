@@ -53,6 +53,7 @@
     <Compile Include="Named\HangmanStrategy.cs" />
     <Compile Include="Named\I18N.cs" />
     <Compile Include="Named\CountRegionsInBoolArray.cs" />
+    <Compile Include="Named\InvertPairsInLinkedList.cs" />
     <Compile Include="Named\OneNumberMissingFromOrderedArray.cs" />
     <Compile Include="Named\TreeLowestCommonAncestor.cs" />
     <Compile Include="Named\GraphSerialization.cs" />
