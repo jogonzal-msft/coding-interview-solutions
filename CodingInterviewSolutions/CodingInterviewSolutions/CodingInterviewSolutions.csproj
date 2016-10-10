@@ -55,6 +55,7 @@
     <Compile Include="Named\CountRegionsInBoolArray.cs" />
     <Compile Include="Named\InvertPairsInLinkedList.cs" />
     <Compile Include="Named\OneNumberMissingFromOrderedArray.cs" />
+    <Compile Include="Named\SumOfTwoNumbersInArray.cs" />
     <Compile Include="Named\TreeLowestCommonAncestor.cs" />
     <Compile Include="Named\GraphSerialization.cs" />
     <Compile Include="Named\CondensingContacts.cs" />
