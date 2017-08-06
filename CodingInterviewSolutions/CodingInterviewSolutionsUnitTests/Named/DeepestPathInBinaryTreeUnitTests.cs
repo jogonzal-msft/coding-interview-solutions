@@ -9,41 +9,41 @@ namespace CodingInterviewSolutionsUnitTests.Named
 	[TestClass]
 	public class DeepestPathInBinaryTreeUnitTests
 	{
-		private static DeepestPathInBinaryTree.Tree _sampleTree = new DeepestPathInBinaryTree.Tree()
+		private static DeepestPathInBinaryTree.TreeNode _sampleTree = new DeepestPathInBinaryTree.TreeNode()
 		{
 			Value = 5,
-			Left = new DeepestPathInBinaryTree.Tree()
+			Left = new DeepestPathInBinaryTree.TreeNode()
 			{
 				Value = 2,
-				Right = new DeepestPathInBinaryTree.Tree()
+				Right = new DeepestPathInBinaryTree.TreeNode()
 				{
 					Value = 3,
 				},
-				Left = new DeepestPathInBinaryTree.Tree()
+				Left = new DeepestPathInBinaryTree.TreeNode()
 				{
 					Value = 1
 				}
 			},
-			Right = new DeepestPathInBinaryTree.Tree()
+			Right = new DeepestPathInBinaryTree.TreeNode()
 			{
 				Value = 20,
-				Right = new DeepestPathInBinaryTree.Tree()
+				Right = new DeepestPathInBinaryTree.TreeNode()
 				{
 					Value = 40,
-					Left = new DeepestPathInBinaryTree.Tree()
+					Left = new DeepestPathInBinaryTree.TreeNode()
 					{
 						Value = 30
 					},
-					Right = new DeepestPathInBinaryTree.Tree()
+					Right = new DeepestPathInBinaryTree.TreeNode()
 					{
 						Value = 50,
-						Left = new DeepestPathInBinaryTree.Tree()
+						Left = new DeepestPathInBinaryTree.TreeNode()
 						{
 							Value = 100
 						},
 					}
 				},
-				Left = new DeepestPathInBinaryTree.Tree()
+				Left = new DeepestPathInBinaryTree.TreeNode()
 				{
 					Value = 15
 				}

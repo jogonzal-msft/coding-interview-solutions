@@ -8,54 +8,67 @@ namespace CodingInterviewSolutions.Named
 		/// <summary>
 		/// Binary tree implementation
 		/// </summary>
-		internal class Tree
+		internal class TreeNode
 		{
-			internal Tree Left { get; set; }
-			internal Tree Right { get; set; }
+			internal TreeNode Left { get; set; }
+			internal TreeNode Right { get; set; }
 			internal int Value { get; set; }
 		}
 
-		internal static List<Tree> Run(Tree root)
+		internal static List<TreeNode> Run(TreeNode root)
 		{
 			// Questions to ask here
 			// 1. Is the tree ordered?
 			// If it is, there is a simple O(2 * log(n)) solution
-			// 2. If not, then this is the solution that is O(n)
+			// 2. If not, then this is the solution that is O(n) and stores a lot of data... and a solution that doesn't store a lot of data. That is the solution that is implemented below.
 
 			if (root == null)
 			{
 				throw new ArgumentException("Root should not be null");
 			}
 
-			List<Tree> currentPath = new List<Tree>();
-			List<Tree> deepestPath = new List<Tree>();
+			Dictionary<TreeNode, int> deepestPathDictionary = new Dictionary<TreeNode, int>();
+			int maxDepth = AnnotateDepths(root, 0, deepestPathDictionary);
 
-			FindDeepestPath(root, currentPath, ref deepestPath);
-
+			List<TreeNode> deepestPath = new List<TreeNode>();
+			WalkMaxDepthPath(root, maxDepth, deepestPath, deepestPathDictionary);
 			return deepestPath;
 		}
 
-		private static void FindDeepestPath(Tree currentNode, List<Tree> currentPath, ref List<Tree> deepestPath)
+		private static void WalkMaxDepthPath(TreeNode currentNode, int maxDepth, List<TreeNode> deepestPath, Dictionary<TreeNode, int> deepestPathDictionary)
 		{
-			// Calculate current path
-			currentPath = new List<Tree>(currentPath) {currentNode};
+			deepestPath.Add(currentNode);
 
+			if (currentNode.Left != null && deepestPathDictionary[currentNode.Left] == maxDepth)
+			{
+				WalkMaxDepthPath(currentNode.Left, maxDepth, deepestPath, deepestPathDictionary);
+			}
+			else if (currentNode.Right != null && deepestPathDictionary[currentNode.Right] == maxDepth)
+			{
+				WalkMaxDepthPath(currentNode.Right, maxDepth, deepestPath, deepestPathDictionary);
+			}
+		}
+
+		/// <summary>
+		/// Annotate the TreeNodes by 
+		/// </summary>
+		private static int AnnotateDepths(TreeNode currentNode, int currentDepth, Dictionary<TreeNode, int> deepestPathDictionary)
+		{
 			// Go left and right (if possible)
+			int maxDepthLeft = -1, maxDepthRight = -1;
 			if (currentNode.Left != null)
 			{
-				FindDeepestPath(currentNode.Left, currentPath, ref deepestPath);
+				maxDepthLeft = AnnotateDepths(currentNode.Left, currentDepth + 1, deepestPathDictionary);
 			}
 			if (currentNode.Right != null)
 			{
-				FindDeepestPath(currentNode.Right, currentPath, ref deepestPath);
+				maxDepthRight = AnnotateDepths(currentNode.Right, currentDepth + 1, deepestPathDictionary);
 			}
 
-			// Only if it's a leaf node, compare against deepest path
-			if (currentNode.Left == null && currentNode.Right == null
-				&& currentPath.Count > deepestPath.Count)
-			{
-				deepestPath = currentPath;
-			}
+			int maxDepthSeenByThisPath = Math.Max(currentDepth, Math.Max(maxDepthLeft, maxDepthRight));
+
+			deepestPathDictionary[currentNode] = maxDepthSeenByThisPath;
+			return maxDepthSeenByThisPath;
 		}
 	}
 }
