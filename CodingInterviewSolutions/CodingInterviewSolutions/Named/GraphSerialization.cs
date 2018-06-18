@@ -6,7 +6,15 @@ using Newtonsoft.Json;
 namespace CodingInterviewSolutions.Named
 {
 	/// <summary>
-	/// This problem consists on serializing and deserializing a graph object given below
+	/// Problem description: Given a graph formed by nodes described by the class "Node" below, we want to serialize it.
+	/// You have access to a JSON serializer (e.g. JSON.stringify for JS or JSON.NET for C#) that can serialize DAGs (Directed Acyclic Graph), however, it didn't work for all graphs in your test cases.
+	/// (Candidate should ask/suggest these are possible problems) Problem 1: The graph contains cycles (node1 -> node2 -> node1 -> node2) and (optional) Problem 2: a node can have multiple parents (e.g. node1 can be a child of node2 and of node3)
+	/// Hint1: For a graph that contains cycles, when you used your JSON serializer that works on DAGs, it threw an error "Converting circular structure to JSON"
+	/// Hint2: For a graph that contains nodes with multiple parents, you noticed the serializer worked, but it serialized the same node multiple times. In a case where a node was the child of all other N nodes in the graph, it serialized that node N times.
+	/// Solution 1 (implemented here): A. Add ids to all nodes B. Whenever you see a node that you've already seen in the graph, serialize only its id
+	/// Solution 2: Add ids to all nodes. Serialize the connections of the nodes as an array with only their id's (e.g. [node1 -> node2, node1 -> node3, ...])
+	///             and serialize all unique nodes in a linear list.
+	/// Bonus: Build a deserializer for the results of your serializers
 	/// </summary>
 	public static class GraphSerialization
 	{
