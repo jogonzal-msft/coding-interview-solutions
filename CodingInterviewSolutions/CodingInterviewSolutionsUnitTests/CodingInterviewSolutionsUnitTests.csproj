@@ -70,6 +70,7 @@
     <Compile Include="Named\HangmanStrategyUnitTests.cs" />
     <Compile Include="Named\I18NUnitTests.cs" />
     <Compile Include="Named\CountRegionsInBoolArrayUnitTests.cs" />
+    <Compile Include="Named\SwapNodePairsInLinkedListUnitTests.cs" />
     <Compile Include="Named\TreeLowestCommonAncestorUnitTests.cs" />
     <Compile Include="Named\CondensingContactsUnitTests.cs" />
     <Compile Include="Named\DeepestPathInBinaryTreeUnitTests.cs" />
