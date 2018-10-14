@@ -27,7 +27,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 			var input = new List<int>() { 1 };
 			var expectedOutput = new List<int>() { 1 };
 
-			TestMethod(input, expectedOutput);
+			TestBothSolutions(input, expectedOutput);
 		}
 
 		[TestMethod]
@@ -36,7 +36,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 			var input = new List<int>() { 1, 2 };
 			var expectedOutput = new List<int>() { 2, 1 };
 
-			TestMethod(input, expectedOutput);
+			TestBothSolutions(input, expectedOutput);
 		}
 
 		[TestMethod]
@@ -45,7 +45,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 			var input = new List<int>() { 1, 2, 3 };
 			var expectedOutput = new List<int>() { 2, 1, 3 };
 
-			TestMethod(input, expectedOutput);
+			TestBothSolutions(input, expectedOutput);
 		}
 
 		[TestMethod]
@@ -54,7 +54,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 			var input = new List<int>() { 1, 2, 3, 4 };
 			var expectedOutput = new List<int>() { 2, 1, 4, 3 };
 
-			TestMethod(input, expectedOutput);
+			TestBothSolutions(input, expectedOutput);
 		}
 
 		[TestMethod]
@@ -63,7 +63,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 			var input = new List<int>() { 1, 2, 3, 4, 5 };
 			var expectedOutput = new List<int>() { 2, 1, 4, 3, 5 };
 
-			TestMethod(input, expectedOutput);
+			TestBothSolutions(input, expectedOutput);
 		}
 
 		[TestMethod]
@@ -72,13 +72,28 @@ namespace CodingInterviewSolutionsUnitTests.Named
 			var input = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8 };
 			var expectedOutput = new List<int>() { 2, 1, 4, 3, 6, 5, 8, 7 };
 
-			TestMethod(input, expectedOutput);
+			TestBothSolutions(input, expectedOutput);
 		}
 
-		private void TestMethod(List<int> input, List<int> expectedOutput)
+		private void TestBothSolutions(List<int> input, List<int> expectedOutput)
+		{
+			TestRecursiveSolution(input, expectedOutput);
+			TestIterativeSolution(input, expectedOutput);
+		}
+
+		private void TestRecursiveSolution(List<int> input, List<int> expectedOutput)
 		{
 			var actualNodeList = ConvertListToLinkedList(input);
 			SwapNodePairsInLinkedList.SwapPairsRecursive(ref actualNodeList);
+
+			var converted = ConvertLinkedListToList(actualNodeList);
+			converted.ShouldBeEquivalentTo(expectedOutput, options => options.WithStrictOrdering());
+		}
+
+		private void TestIterativeSolution(List<int> input, List<int> expectedOutput)
+		{
+			var actualNodeList = ConvertListToLinkedList(input);
+			SwapNodePairsInLinkedList.SwapPairsIterative(ref actualNodeList);
 
 			var converted = ConvertLinkedListToList(actualNodeList);
 			converted.ShouldBeEquivalentTo(expectedOutput, options => options.WithStrictOrdering());
