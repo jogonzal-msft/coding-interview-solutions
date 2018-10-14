@@ -79,6 +79,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 		{
 			TestRecursiveSolution(input, expectedOutput);
 			TestIterativeSolution(input, expectedOutput);
+			TestIterativeSolutionDummyNode(input, expectedOutput);
 		}
 
 		private void TestRecursiveSolution(List<int> input, List<int> expectedOutput)
@@ -94,6 +95,15 @@ namespace CodingInterviewSolutionsUnitTests.Named
 		{
 			var actualNodeList = ConvertListToLinkedList(input);
 			SwapNodePairsInLinkedList.SwapPairsIterative(ref actualNodeList);
+
+			var converted = ConvertLinkedListToList(actualNodeList);
+			converted.ShouldBeEquivalentTo(expectedOutput, options => options.WithStrictOrdering());
+		}
+
+		private void TestIterativeSolutionDummyNode(List<int> input, List<int> expectedOutput)
+		{
+			var actualNodeList = ConvertListToLinkedList(input);
+			SwapNodePairsInLinkedList.SwapPairsIterativeDummyNode(ref actualNodeList);
 
 			var converted = ConvertLinkedListToList(actualNodeList);
 			converted.ShouldBeEquivalentTo(expectedOutput, options => options.WithStrictOrdering());
