@@ -18,13 +18,70 @@ namespace CodingInterviewSolutionsUnitTests.Named
 			var list = new List<int>() { 1, 2, 3, 4, 5, 6, 7 };
 			var converted = ConvertLinkedListToList(ConvertListToLinkedList(list));
 
-			converted.Should().BeEquivalentTo(list);
+			converted.ShouldBeEquivalentTo(list, options => options.WithStrictOrdering());
 		}
 
 		[TestMethod]
 		public void Test1Node()
 		{
-			
+			var input = new List<int>() { 1 };
+			var expectedOutput = new List<int>() { 1 };
+
+			TestMethod(input, expectedOutput);
+		}
+
+		[TestMethod]
+		public void Test2Nodes()
+		{
+			var input = new List<int>() { 1, 2 };
+			var expectedOutput = new List<int>() { 2, 1 };
+
+			TestMethod(input, expectedOutput);
+		}
+
+		[TestMethod]
+		public void Test3Nodes()
+		{
+			var input = new List<int>() { 1, 2, 3 };
+			var expectedOutput = new List<int>() { 2, 1, 3 };
+
+			TestMethod(input, expectedOutput);
+		}
+
+		[TestMethod]
+		public void Test4Nodes()
+		{
+			var input = new List<int>() { 1, 2, 3, 4 };
+			var expectedOutput = new List<int>() { 2, 1, 4, 3 };
+
+			TestMethod(input, expectedOutput);
+		}
+
+		[TestMethod]
+		public void Test5Nodes()
+		{
+			var input = new List<int>() { 1, 2, 3, 4, 5 };
+			var expectedOutput = new List<int>() { 2, 1, 4, 3, 5 };
+
+			TestMethod(input, expectedOutput);
+		}
+
+		[TestMethod]
+		public void Test8Nodes()
+		{
+			var input = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8 };
+			var expectedOutput = new List<int>() { 2, 1, 4, 3, 6, 5, 8, 7 };
+
+			TestMethod(input, expectedOutput);
+		}
+
+		private void TestMethod(List<int> input, List<int> expectedOutput)
+		{
+			var actualNodeList = ConvertListToLinkedList(input);
+			SwapNodePairsInLinkedList.SwapPairsRecursive(ref actualNodeList);
+
+			var converted = ConvertLinkedListToList(actualNodeList);
+			converted.ShouldBeEquivalentTo(expectedOutput, options => options.WithStrictOrdering());
 		}
 
 		private List<int> ConvertLinkedListToList(SwapNodePairsInLinkedList.LinkedListNode node)
