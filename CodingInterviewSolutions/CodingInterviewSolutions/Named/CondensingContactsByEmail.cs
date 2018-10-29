@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace CodingInterviewSolutions.Named
 {
-	public class CondensingContacts
+	public class CondensingContactsByEmail
 	{
 		public class Contact
 		{

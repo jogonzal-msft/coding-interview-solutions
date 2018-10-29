@@ -72,7 +72,7 @@
     <Compile Include="Named\CountRegionsInBoolArrayUnitTests.cs" />
     <Compile Include="Named\SwapNodePairsInLinkedListUnitTests.cs" />
     <Compile Include="Named\TreeLowestCommonAncestorUnitTests.cs" />
-    <Compile Include="Named\CondensingContactsUnitTests.cs" />
+    <Compile Include="Named\CondensingContactsByEmailUnitTests.cs" />
     <Compile Include="Named\DeepestPathInBinaryTreeUnitTests.cs" />
     <Compile Include="Named\OneNumberMissingFromOrderedArrayUnitTests.cs" />
     <Compile Include="Named\InvertPairsInLinkedListUnitTests.cs" />

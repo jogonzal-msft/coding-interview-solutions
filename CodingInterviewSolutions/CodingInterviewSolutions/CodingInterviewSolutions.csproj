@@ -59,7 +59,7 @@
     <Compile Include="Named\SwapNodePairsInLinkedLists.cs" />
     <Compile Include="Named\TreeLowestCommonAncestor.cs" />
     <Compile Include="Named\GraphSerialization.cs" />
-    <Compile Include="Named\CondensingContacts.cs" />
+    <Compile Include="Named\CondensingContactsByEmail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Small\RemoveElementFromLinkedList.cs" />
     <Compile Include="Small\UrlEncodeSpaces.cs" />
