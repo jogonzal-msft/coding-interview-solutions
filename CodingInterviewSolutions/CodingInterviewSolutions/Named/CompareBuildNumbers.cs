@@ -1,14 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodingInterviewSolutions.Named
 {
 	public static class CompareBuildNumbers
 	{
 		public static int Compare(string a, string b)
+		{
+			return CompareEfficient(a, b);
+		}
+
+		public static int CompareInefficient(string a, string b)
 		{
 			if (a == null)
 			{
@@ -62,6 +64,56 @@ namespace CodingInterviewSolutions.Named
 			}
 
 			return 0;
+		}
+
+		public static int CompareEfficient(string a, string b)
+		{
+			if (a == null)
+			{
+				a = "";
+			}
+
+			if (b == null)
+			{
+				b = "";
+			}
+
+			var aChunks = a.Split('.');
+			var bChunks = b.Split('.');
+
+			int endOfLoop = Math.Max(aChunks.Length, bChunks.Length);
+			for (int i = 0; i < endOfLoop; i++)
+			{
+				int aChunkAsInt = CompareBuildNumbers.GetChunkAtIndex(aChunks, i);
+				int bChunkAsInt = CompareBuildNumbers.GetChunkAtIndex(bChunks, i);
+
+				if (aChunkAsInt < bChunkAsInt)
+				{
+					return -1; // A is smaller
+				}
+				if (aChunkAsInt > bChunkAsInt)
+				{
+					return 1; // B is smaller
+				}
+			}
+
+			return 0;
+		}
+
+		private static int GetChunkAtIndex(string[] chunks, int i)
+		{
+			if (i >= chunks.Length)
+			{
+				return 0;
+			}
+
+			string currentChunk = chunks[i];
+			int currentChunkAsInt;
+			if (!int.TryParse(currentChunk, out currentChunkAsInt))
+			{
+				return 0;
+			}
+			return currentChunkAsInt;
 		}
 	}
 }
