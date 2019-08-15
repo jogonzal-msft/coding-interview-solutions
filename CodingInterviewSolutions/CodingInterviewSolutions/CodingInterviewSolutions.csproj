@@ -51,6 +51,8 @@
     <Compile Include="Chapter1\Problem1_3.cs" />
     <Compile Include="Named\CompareBuildNumbers.cs" />
     <Compile Include="Named\DeepestPathInBinaryTree.cs" />
+    <Compile Include="Named\DeleteNodeInLinkedListWithReturn.cs" />
+    <Compile Include="Named\DeleteNodeInLinkedList.cs" />
     <Compile Include="Named\HangmanStrategy.cs" />
     <Compile Include="Named\I18N.cs" />
     <Compile Include="Named\CountRegionsInBoolArray.cs" />
