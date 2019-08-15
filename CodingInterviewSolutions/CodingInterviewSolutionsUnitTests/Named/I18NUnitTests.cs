@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace CodingInterviewSolutionsUnitTests.Named
 {
 	[TestClass]
-	class I18NUnitTests
+	public class I18NUnitTests
 	{
 		[TestMethod]
 		public void Test3Chars()

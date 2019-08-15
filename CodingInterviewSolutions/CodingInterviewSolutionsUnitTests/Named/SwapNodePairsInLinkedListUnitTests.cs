@@ -9,7 +9,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace CodingInterviewSolutionsUnitTests.Named
 {
 	[TestClass]
-	class SwapNodePairsInLinkedListUnitTests
+	public class SwapNodePairsInLinkedListUnitTests
 	{
 		[TestMethod]
 		public void TestHelperMethods()
