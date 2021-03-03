@@ -50,6 +50,7 @@
     <Compile Include="Chapter1\Problem1_2.cs" />
     <Compile Include="Chapter1\Problem1_3.cs" />
     <Compile Include="Named\CompareBuildNumbers.cs" />
+    <Compile Include="Named\CyclicSort.cs" />
     <Compile Include="Named\DeepestPathInBinaryTree.cs" />
     <Compile Include="Named\DeleteNodeInLinkedListWithReturn.cs" />
     <Compile Include="Named\DeleteNodeInLinkedList.cs" />
