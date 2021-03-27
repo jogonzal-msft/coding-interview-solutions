@@ -49,6 +49,7 @@
     <Compile Include="Chapter1\Problem1_1.cs" />
     <Compile Include="Chapter1\Problem1_2.cs" />
     <Compile Include="Chapter1\Problem1_3.cs" />
+    <Compile Include="Named\CelebrityProblem.cs" />
     <Compile Include="Named\CompareBuildNumbers.cs" />
     <Compile Include="Named\CyclicSort.cs" />
     <Compile Include="Named\DeepestPathInBinaryTree.cs" />
