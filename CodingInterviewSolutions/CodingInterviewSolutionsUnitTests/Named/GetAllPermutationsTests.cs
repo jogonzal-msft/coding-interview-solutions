@@ -24,7 +24,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 			};
 
 			var output = GetAllPermutations.Get(input, 2);
-			expectedOutput.ShouldBeEquivalentTo(output);
+			expectedOutput.Should().BeEquivalentTo(output);
 		}
 
 		[TestMethod]
@@ -42,7 +42,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 			};
 
 			var output = GetAllPermutations.Get(input, 3);
-			expectedOutput.ShouldBeEquivalentTo(output);
+			expectedOutput.Should().BeEquivalentTo(output);
 		}
 	}
 }

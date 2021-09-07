@@ -22,7 +22,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 				0, 1, 2, 3, 4, 5
 			};
 			var output = CyclicSort.Sort(input);
-			expectedOutput.ShouldBeEquivalentTo(output);
+			expectedOutput.Should().BeEquivalentTo(output);
 		}
 	}
 }

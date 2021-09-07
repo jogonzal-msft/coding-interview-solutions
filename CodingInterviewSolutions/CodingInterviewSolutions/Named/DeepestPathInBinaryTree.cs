@@ -8,14 +8,14 @@ namespace CodingInterviewSolutions.Named
 		/// <summary>
 		/// Binary tree implementation
 		/// </summary>
-		internal class TreeNode
+		public class TreeNode
 		{
-			internal TreeNode Left { get; set; }
-			internal TreeNode Right { get; set; }
-			internal int Value { get; set; }
+			public TreeNode Left { get; set; }
+			public TreeNode Right { get; set; }
+			public int Value { get; set; }
 		}
 
-		internal static List<TreeNode> Run(TreeNode root)
+		public static List<TreeNode> Run(TreeNode root)
 		{
 			// Questions to ask here
 			// 1. Is the tree ordered?

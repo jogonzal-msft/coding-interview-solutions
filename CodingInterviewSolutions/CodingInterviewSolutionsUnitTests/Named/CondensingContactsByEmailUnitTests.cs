@@ -21,7 +21,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 
 			List<CondensingContactsByEmail.CondensedContact> result = CondensingContactsByEmail.Solve(contacts);
 
-			result.ShouldBeEquivalentTo(expected);
+			result.Should().BeEquivalentTo(expected);
 		}
 
 		[TestMethod]
@@ -58,7 +58,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 
 			List<CondensingContactsByEmail.CondensedContact> result = CondensingContactsByEmail.Solve(contacts);
 
-			result.ShouldBeEquivalentTo(expected);
+			result.Should().BeEquivalentTo(expected);
 		}
 
 		[TestMethod]
@@ -104,7 +104,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 
 			List<CondensingContactsByEmail.CondensedContact> result = CondensingContactsByEmail.Solve(contacts);
 
-			result.ShouldBeEquivalentTo(expected);
+			result.Should().BeEquivalentTo(expected);
 		}
 
 		[TestMethod]
@@ -160,7 +160,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 
 			List<CondensingContactsByEmail.CondensedContact> result = CondensingContactsByEmail.Solve(contacts);
 
-			result.ShouldBeEquivalentTo(expected);
+			result.Should().BeEquivalentTo(expected);
 		}
 
 		[TestMethod]
@@ -240,7 +240,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 
 			List<CondensingContactsByEmail.CondensedContact> result = CondensingContactsByEmail.Solve(contacts);
 
-			result.ShouldBeEquivalentTo(expected);
+			result.Should().BeEquivalentTo(expected);
 		}
 	}
 }

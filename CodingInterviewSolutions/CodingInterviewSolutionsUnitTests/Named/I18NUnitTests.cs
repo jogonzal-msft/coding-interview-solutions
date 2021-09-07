@@ -26,8 +26,8 @@ namespace CodingInterviewSolutionsUnitTests.Named
 			};
 			var sol1 = I18NCountingSolution.GenerateAllPossibleAbbreviationsInternal(input);
 			var sol2 = I18NRecursiveSolution.GenerateAllPossibleAbbreviationsInternal(input);
-			expectedOutput.ShouldBeEquivalentTo(sol1);
-			expectedOutput.ShouldBeEquivalentTo(sol2);
+			expectedOutput.Should().BeEquivalentTo(sol1);
+			expectedOutput.Should().BeEquivalentTo(sol2);
 		}
 	}
 }

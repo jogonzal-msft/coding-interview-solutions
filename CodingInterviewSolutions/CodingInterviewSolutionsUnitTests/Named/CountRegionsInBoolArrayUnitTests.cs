@@ -116,7 +116,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 				int someInt = CountRegionsInBoolArray.FindCountRegionsWithTrue(matrix);
 			};
 
-			action.ShouldThrow<ArgumentNullException>();
+			action.Should().Throw<ArgumentNullException>();
 		}
 	}
 }

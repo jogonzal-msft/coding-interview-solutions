@@ -18,7 +18,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 			var list = new List<int>() { 1, 2, 3, 4, 5, 6, 7 };
 			var converted = ConvertLinkedListToList(ConvertListToLinkedList(list));
 
-			converted.ShouldBeEquivalentTo(list, options => options.WithStrictOrdering());
+			converted.Should().BeEquivalentTo(list, options => options.WithStrictOrdering());
 		}
 
 		[TestMethod]
@@ -88,7 +88,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 			SwapNodePairsInLinkedList.SwapPairsRecursive(ref actualNodeList);
 
 			var converted = ConvertLinkedListToList(actualNodeList);
-			converted.ShouldBeEquivalentTo(expectedOutput, options => options.WithStrictOrdering());
+			converted.Should().BeEquivalentTo(expectedOutput, options => options.WithStrictOrdering());
 		}
 
 		private void TestIterativeSolution(List<int> input, List<int> expectedOutput)
@@ -97,7 +97,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 			SwapNodePairsInLinkedList.SwapPairsIterative(ref actualNodeList);
 
 			var converted = ConvertLinkedListToList(actualNodeList);
-			converted.ShouldBeEquivalentTo(expectedOutput, options => options.WithStrictOrdering());
+			converted.Should().BeEquivalentTo(expectedOutput, options => options.WithStrictOrdering());
 		}
 
 		private void TestIterativeSolutionDummyNode(List<int> input, List<int> expectedOutput)
@@ -106,7 +106,7 @@ namespace CodingInterviewSolutionsUnitTests.Named
 			SwapNodePairsInLinkedList.SwapPairsIterativeDummyNode(ref actualNodeList);
 
 			var converted = ConvertLinkedListToList(actualNodeList);
-			converted.ShouldBeEquivalentTo(expectedOutput, options => options.WithStrictOrdering());
+			converted.Should().BeEquivalentTo(expectedOutput, options => options.WithStrictOrdering());
 		}
 
 		private List<int> ConvertLinkedListToList(SwapNodePairsInLinkedList.LinkedListNode node)

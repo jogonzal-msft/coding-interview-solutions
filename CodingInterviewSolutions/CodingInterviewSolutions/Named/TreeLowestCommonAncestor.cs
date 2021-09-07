@@ -10,14 +10,14 @@ namespace CodingInterviewSolutions.Named
 		/// <summary>
 		/// Binary tree implementation
 		/// </summary>
-		internal class Tree
+		public class Tree
 		{
-			internal Tree Left { get; set; }
-			internal Tree Right { get; set; }
-			internal int Value { get; set; }
+			public Tree Left { get; set; }
+			public Tree Right { get; set; }
+			public int Value { get; set; }
 		}
 
-		internal static Tree LowestCommonAncestor(Tree root , int value1, int value2)
+		public static Tree LowestCommonAncestor(Tree root , int value1, int value2)
 		{
 			int smallValue = Math.Min(value1, value2);
 			int bigValue = Math.Max(value1, value2);
