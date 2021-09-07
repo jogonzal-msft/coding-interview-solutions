@@ -71,8 +71,10 @@
     <Compile Include="Named\CompareBuildNumberUnitTests.cs" />
     <Compile Include="Named\DeleteNodeInLinkedListWithReturn.cs" />
     <Compile Include="Named\DeleteNodeInLinkedListUnitTests.cs" />
+    <Compile Include="Named\GetAllPermutationsTests.cs" />
     <Compile Include="Named\HangmanStrategyUnitTests.cs" />
     <Compile Include="Named\CyclicSortUnitTests.cs" />
+    <Compile Include="Named\GetAllCombinationsTests.cs" />
     <Compile Include="Named\I18NUnitTests.cs" />
     <Compile Include="Named\CountRegionsInBoolArrayUnitTests.cs" />
     <Compile Include="Named\SwapNodePairsInLinkedListUnitTests.cs" />
